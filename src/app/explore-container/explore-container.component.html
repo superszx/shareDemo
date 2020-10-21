@@ -1,9 +1,16 @@
 <div id="container" >
-  <ion-button ion-button (click)="share()" color="danger"> share </ion-button>
+  <ion-button ion-button (click)="share_with_msg_img()" color="danger"> msg+img </ion-button>
   <ion-button ion-button (click)="share_via_facebook()" color="danger"> facebook </ion-button>
-  <ion-button ion-button (click)="share_via_whatsapp()" color="danger"> whatsapp </ion-button>
+  <ion-button ion-button (click)="share_via_whatsapp_msg_url()" color="danger"> whatsapp msg_url </ion-button>
+  <ion-button ion-button (click)="share_via_whatsapp_msg_url_img()" color="danger"> whatsapp msg_url_img </ion-button>
+  <ion-button ion-button (click)="share_via_whatsapp_msg_url_img_url()" color="danger"> whatsapp msg_url </ion-button>
   <ion-button ion-button (click)="share_via_sms()" color="danger"> sms </ion-button>
   <ion-button ion-button (click)="share_via_email()" color="danger"> email </ion-button>
-  <ion-button ion-button (click)="share_with_url()" color="danger"> share </ion-button>
+  <ion-button ion-button (click)="share_with_msg_img_url()" color="danger"> msg+img+url </ion-button>
+  <ion-button ion-button (click)="share_with_msg_url_pdf()" color="danger"> msg+url+pdf </ion-button>
   <ion-button ion-button (click)="native_camera()" color="danger">camera</ion-button>
+  <ion-button ion-button (click)="share_with_msg_url()" color="danger"> msg+url </ion-button>
+  <ion-button ion-button (click)="share_with_msg_url_msg()" color="danger"> msg+url+msg </ion-button>
+  <ion-button ion-button (click)="share_with_double()" color="danger">double share </ion-button>
+  <ion-button><a href="https://api.whatsapp.com/send?phone=8613169687286&text=MessagePad!!!http://www.baidu.com">whatsapp api</a></ion-button> 
 </div>

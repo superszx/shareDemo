@@ -36,36 +36,77 @@ export class ExploreContainerComponent implements OnInit {
     });
   }
 
-  share(){
+  share_with_msg_img(){
     this.socialSharing.share('message!!!!!', null, this.image).then(() => {
       }).catch(() => {
       });
   }
-  share_with_url(){
-    this.socialSharing.share('message!!!!!', 'subject', this.image
-    , 'www.baidu.com').then(() => {
+
+
+
+  share_with_msg_img_url(){
+    this.socialSharing.share('message!!!!! http://www.baidu.com', null, this.image).then(() => {
       }).catch(() => {
       });
   }
-  share_via_facebook(){
-    this.socialSharing.shareViaFacebook('message!!!!!', this.image).then(() => {
+  share_with_msg_url(){
+    this.socialSharing.share('message!!!!! http://www.baidu.com ').then(() => {
+      }).catch(() => {
+      });
+  }
+  share_with_msg_url_msg(){
+    this.socialSharing.share('message!!!!! http://www.baidu.com message!!!!!').then(() => {
       }).catch(() => {
       });
   }
 
-  share_via_whatsapp(){
-    this.socialSharing.shareViaWhatsApp('message!!!!!', this.image).then(() => {
+  share_with_msg_url_pdf(){
+    this.socialSharing.share('message!!!!! http://www.baidu.com','subject!!!',['https://tools.ietf.org/pdf/rfc2048.pdf',this.image]).then(() => {
+      }).catch(() => {
+      });
+  }
+
+  share_with_double(){
+    this.socialSharing.share(null, null, this.image).then(() => {
+    }).catch(() => {
+    });
+
+    this.socialSharing.share('message!!!!! http://www.baidu.com message!!!!! ').then(() => {
+      }).catch(() => {
+      });
+  }
+
+  share_via_facebook(){
+    this.socialSharing.shareViaFacebook('message!!!!!', this.image,'https://www.wikihow.com/images/a/a0/Open-PDF-Files-Step-8.jpg').then(() => {
+      }).catch(() => {
+      });
+  }
+
+  share_via_whatsapp_msg_url(){
+    this.socialSharing.shareViaWhatsApp('message!!!!! http://www.baidu.com').then(() => {
+      }).catch(() => {
+      });
+  }
+
+  share_via_whatsapp_msg_url_img(){
+    this.socialSharing.shareViaWhatsApp('message!!!!! http://www.baidu.com' , this.image).then(() => {
+      }).catch(() => {
+      });
+  }
+
+  share_via_whatsapp_msg_url_img_url(){
+    this.socialSharing.shareViaWhatsApp('message!!!!! http://www.baidu.com' , this.image, 'http://www.bing.com').then(() => {
       }).catch(() => {
       });
   }
 
   share_via_sms(){
-    this.socialSharing.shareViaSMS('message!!!!!', '13169687286').then(() => {
+    this.socialSharing.shareViaSMS('message!!!!! http://www.baidu.com', '13169687286').then(() => {
       }).catch(() => {
     });
   }
 
   share_via_email(){
-    this.socialSharing.shareViaEmail('message!!!!!', 'subject!!!!', ['529203156@qq.com'],null, null, this.image);
+    this.socialSharing.shareViaEmail('message!!!!!', 'subject!!!!', ['529203156@qq.com'],null, null, ['https://tools.ietf.org/pdf/rfc2048.pdf',this.image]);
   }
 }
